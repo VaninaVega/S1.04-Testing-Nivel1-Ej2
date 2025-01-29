@@ -24,8 +24,8 @@ public class CalculoDniTest {
 
         try {
             CalculoDni.calculateIDLetter(100000000);
-            fail("RuntimeException expected for ID too large.");
-        } catch (RuntimeException e) {
+            fail("IllegalArgumentException expected for ID too large.");
+        } catch (IllegalArgumentException e) {
             assertEquals("Not valid ID 100000000", e.getMessage(), "Exception message does not match for DNI too large.");
         }
     }

@@ -10,7 +10,7 @@ public class CalculoDni {
         "A", "G", "M", "Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E");
         char response = 0;
         if (idNum < 0 || idNum >= 99999999) {
-           throw new RuntimeException("Not valid ID " + idNum);
+           throw new IllegalArgumentException("Not valid ID " + idNum);
         } else {
             int rest = idNum % 23;
            response = letters.get(rest).charAt(0);
