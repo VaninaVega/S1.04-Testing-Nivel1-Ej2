@@ -20,7 +20,12 @@ public class CalculateDniTest {
             "89012345, E",
             "24462905, J",
             "30609502, K",
-            "56838824, M"
+            "56838824, M",
+            "0, T",            // Mínimo válido
+            "1, R",            // Justo después del mínimo
+            "99999999, R",     // Máximo válido
+            "99999998, T"      // Justo antes del máximo
+
     })
      void calculateLetterTest(int dni, char expectedLetter) {
         char letter = CalculateDni.calculateIDLetter(dni);
