@@ -11,6 +11,7 @@ public class CalculateDniTest {
 
     @ParameterizedTest
     @CsvSource({
+            //Normal cases
             "12345678, Z",
             "52694436, X",
             "28771125, B",
@@ -21,6 +22,7 @@ public class CalculateDniTest {
             "24462905, J",
             "30609502, K",
             "56838824, M",
+            //Limit cases
             "0, T",            // Mínimo válido
             "1, R",            // Justo después del mínimo
             "99999999, R",     // Máximo válido
